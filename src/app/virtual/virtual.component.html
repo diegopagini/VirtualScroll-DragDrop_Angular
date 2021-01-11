@@ -1,0 +1,14 @@
+<h1>Virtual Scroll</h1>
+<hr />
+<cdk-virtual-scroll-viewport class="list-container list-group" itemSize="50">
+  <div
+    class="list-group-item"
+    *cdkVirtualFor="let persona of personas; let i = index; let conte = count"
+  >
+    Item {{ i }} / {{ conte }}
+  </div>
+</cdk-virtual-scroll-viewport>
+
+<div class="example-box" cdkDrag>
+  <h1>Drag Me! De Angular Material</h1>
+</div>
