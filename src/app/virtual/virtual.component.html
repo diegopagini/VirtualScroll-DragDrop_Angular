@@ -1,13 +1,33 @@
 <h1>Virtual Scroll</h1>
 <hr />
+
+<div class="row">
+  <div class="col">
+    <button (click)="irAlFinal()" class="btn btn-primary">Ir al Final</button>
+  </div>
+  <div class="col">
+    <button (click)="irAlInicio()" class="btn btn-primary">Ir al Inicio</button>
+  </div>
+  <div class="col">
+    <button (click)="irALaMitad()" class="btn btn-primary">
+      Ir a la Mitad
+    </button>
+  </div>
+</div>
+
+<br />
+
 <cdk-virtual-scroll-viewport class="list-container list-group" itemSize="50">
   <div
-    class="list-group-item"
+    class="list-group-item animate__animated animate__bounce"
     *cdkVirtualFor="let persona of personas; let i = index; let conte = count"
   >
     Item {{ i }} / {{ conte }}
   </div>
 </cdk-virtual-scroll-viewport>
+
+<h1 class="mt-5">Drag & Drop</h1>
+<hr />
 
 <div class="example-box" cdkDrag>
   <h1>Drag Me! De Angular Material</h1>
